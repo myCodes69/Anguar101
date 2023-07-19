@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-3">
+    <header>
+       <h1>
+        Parent Component
+       </h1>
+      </header>
+      <section>
+       <p>
+         <input type="text" placeholder="your name" #n/>
+
+       </p> 
+       <p>
+         <input type="email" placeholder="your email" #e/>
+
+       </p>
+       <button class="btn btn-lg btn-warning" (click)="fun(n.value,e.value)">Send data</button>
+
+      </section>
+  </div>
+  <div class="col-md-3">
+    <app-comp1 [data]="userinfo" > // userinfo obj array will be visible here . 1. use a known property or an unknown one which must be declared in its class(ts) file. that data (here) will hold the data from parent component.
+    </app-comp1>
+  </div>
+  <div class="col-md-3">
+    <app-comp2 [data]="userinfo"></app-comp2>
+  </div>
+  <div class="col-md-3">
+    <app-comp3></app-comp3>
+  </div>
+</div>
